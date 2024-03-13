@@ -1,13 +1,15 @@
 // @ts-nocheck
 import List from '@ohos.util.List'
+import router from '@ohos.router'
 import {Test1} from "./test1"
+import CommonConstants from '../common/constants/CommonConstants'
 
 @Entry
 @Component
 
 struct Index {
  
-  @State message: string = 'Hello World'
+  @State message: string = '中文!'
   @State flag : boolean = true
   @State list2: Array<string> = [
     '123',
@@ -48,11 +50,23 @@ struct Index {
           .height("80vp")
           .onClick(()=>{
             this.flag = ! this.flag
-            this.message= this.flag?"yes":"no"
+            this.message= this.flag?"中文？":"no"
             this.wuhu2+=1
             this.wuhu+=1
             console.warn("123123"+this.flag)
           })
+
+        Column(){
+          Button(this.message)
+            .width("200vp")
+            .height('60vp')
+            .onClick(() => {
+              console.log("测试点击")
+              router.pushUrl({
+                url : 'pages/Test2'
+              })
+            })
+        }
       }      
       .width("100%")
       .height("100%")

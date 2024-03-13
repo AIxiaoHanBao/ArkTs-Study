@@ -1,5 +1,9 @@
 {
   "src": [
-    "pages/Index"
+    "pages/Index",
+    "pages/Test2",
+    "pages/Test3_ForEach",
+    "pages/Test4_Row_Column",
+    "pages/Test5_List_ForEach"
   ]
 }
