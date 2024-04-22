@@ -3,7 +3,7 @@ import List from '@ohos.util.List'
 import router from '@ohos.router'
 import {Test1} from "./test1"
 import CommonConstants from '../common/constants/CommonConstants'
-
+@Preview
 @Entry
 @Component
 
